@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="CvEntityCore.Admin" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cv Admin Sayfası</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="Default.aspx">Web Cv</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="AdminHakkimda.aspx">Eğitim Hayatım</a></li>
+      <li><a href="Administatistik.aspx">İstatistik</a></li>
+      <li><a href="AdminYeteneklerim.aspx">Yeteneklerim</a></li>
+      <li><a href="Adminiletisim.aspx">İletişim</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+    </asp:ContentPlaceHolder>
+</div>
+
+</body>
+</html>

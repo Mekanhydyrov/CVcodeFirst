@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbCvEntityCoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TblAdres">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Adres" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Konum" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TblCalismalarim">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adres" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TblHakkimda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Egitim" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isDeneyimlerim" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="iletisimAciklama" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="AdSoyad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Foto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Unvan" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tbliletisim">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mesaj" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Konu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TblYetenekler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Yetenek" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Derece" Type="Byte" />
+  </EntityType>
+  <EntityContainer Name="DbCvEntityCoreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TblAdres" EntityType="Self.TblAdres" />
+    <EntitySet Name="TblCalismalarim" EntityType="Self.TblCalismalarim" />
+    <EntitySet Name="TblHakkimda" EntityType="Self.TblHakkimda" />
+    <EntitySet Name="Tbliletisim" EntityType="Self.Tbliletisim" />
+    <EntitySet Name="TblYetenekler" EntityType="Self.TblYetenekler" />
+    <EntitySet Name="TblAdmin" EntityType="DbCvEntityCoreModel.TblAdmin" />
+  </EntityContainer>
+  <EntityType Name="TblAdmin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kullanıci" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Sifre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
